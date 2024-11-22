@@ -1,0 +1,41 @@
+Arguments: 
+  /Users/spencerfaber/.nvm/versions/node/v18.17.1/bin/node /Users/spencerfaber/.nvm/versions/node/v18.17.1/bin/yarn add veim
+
+PATH: 
+  /Users/spencerfaber/.nvm/versions/node/v18.17.1/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.17.1
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/veim: Not found
+      at params.callback [as _callback] (/Users/spencerfaber/.nvm/versions/node/v18.17.1/lib/node_modules/yarn/lib/cli.js:66145:18)
+      at self.callback (/Users/spencerfaber/.nvm/versions/node/v18.17.1/lib/node_modules/yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:514:28)
+      at Request.<anonymous> (/Users/spencerfaber/.nvm/versions/node/v18.17.1/lib/node_modules/yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:514:28)
+      at IncomingMessage.<anonymous> (/Users/spencerfaber/.nvm/versions/node/v18.17.1/lib/node_modules/yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:628:28)
+      at IncomingMessage.emit (node:events:526:35)
+      at endReadableNT (node:internal/streams/readable:1359:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+npm manifest: 
+  {
+    "name": "viem-scripts",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
