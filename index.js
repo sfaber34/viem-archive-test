@@ -19,7 +19,8 @@ async function getBlockHash(blockNumber) {
 
 async function getAddressBalance(blockNumber) {
   const balance = await localClient.getBalance({
-    address: "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+    // address: "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045", // vitalik
+    address: "0x38c772B96D73733F425746bd368B4B4435A37967", // me
     blockNumber: blockNumber,
   });
   return balance;
