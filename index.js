@@ -17,13 +17,27 @@ async function getBlockHash(blockNumber) {
   return block.hash;
 }
 
+async function getAddressBalance(blockNumber) {
+  const balance = await localClient.getBalance({
+    address: "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+    blockNumber: blockNumber,
+  });
+  return balance;
+}
+
 const currentBlockNumber = await getCurrentBlockNumber();
 
 try {
   const blockHash = await getBlockHash(currentBlockNumber);
+  const balance = await getAddressBalance(currentBlockNumber);
+  // const balanceBack10000 = await getAddressBalance(blockNumberBack10000);
 
   console.log(`Current Block Number:\t${currentBlockNumber}`);
   console.log(`Current Block Hash:\t${blockHash}`);
+  console.log(`Current Address Balance:\t${balance / BigInt(10 ** 18)} ETH`);
+  // console.log(
+  //   `Balance 10000 Blocks Ago:\t${balanceBack10000 / BigInt(10 ** 18)} ETH`
+  // );
 } catch (error) {
   console.error(`Current Block Error:\t${error}`);
 }
