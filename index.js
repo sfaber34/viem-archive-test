@@ -23,7 +23,7 @@ const blockHash = await getBlockHash(currentBlockNumber);
 console.log(`Current Block Number:\t${currentBlockNumber}`);
 console.log(`Current Block Hash:\t${blockHash}`);
 
-const blockNumberBack10000 = currentBlockNumber - 10000;
+const blockNumberBack10000 = currentBlockNumber - BigInt(10000);
 const blockHashBack10000 = await getBlockHash(blockNumberBack10000);
 
 console.log(`Block Number Back 10000:\t${blockNumberBack10000}`);
