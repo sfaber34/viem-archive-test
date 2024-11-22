@@ -19,5 +19,12 @@ async function getBlockHash(blockNumber) {
 
 const currentBlockNumber = await getCurrentBlockNumber();
 const blockHash = await getBlockHash(currentBlockNumber);
-console.log(`Scaffold RPC is on block\t${currentBlockNumber}`);
-console.log(`Block hash:\t${blockHash}`);
+
+console.log(`Current Block Number:\t${currentBlockNumber}`);
+console.log(`Current Block Hash:\t${blockHash}`);
+
+const blockNumberBack10000 = currentBlockNumber - 10000;
+const blockHashBack10000 = await getBlockHash(blockNumberBack10000);
+
+console.log(`Block Number Back 10000:\t${blockNumberBack10000}`);
+console.log(`Block Hash Back 10000:\t${blockHashBack10000}`);
