@@ -85,3 +85,13 @@ try {
 } catch (error) {
   console.error(`Back 1,000,000 Block Error:\t${error}`);
 }
+
+console.log("\n");
+try {
+  const blockNumber1 = BigInt(1);
+  const blockHash1 = await getBlockHash(blockNumber1);
+
+  console.log(`Block Hash for block 1:\t${blockHash1}`);
+} catch (error) {
+  console.error(`Block Number 1 Error:\t${error}`);
+}
