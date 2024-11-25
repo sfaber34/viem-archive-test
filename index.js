@@ -68,3 +68,20 @@ try {
 } catch (error) {
   console.error(`Back 20000 Block Error:\t${error}`);
 }
+
+console.log("\n");
+try {
+  const blockNumberBack1000000 = currentBlockNumber - BigInt(1000000);
+  const blockHashBack1000000 = await getBlockHash(blockNumberBack1000000);
+  const balanceBack1000000 = await getAddressBalance(blockNumberBack1000000);
+
+  console.log(`Block Number Back 1,000,000:\t${blockNumberBack1000000}`);
+  console.log(`Block Hash Back 1,000,000:\t${blockHashBack1000000}`);
+  console.log(
+    `Balance 1,000,000 Blocks Ago:\t${
+      balanceBack1000000 / BigInt(10 ** 18)
+    } ETH`
+  );
+} catch (error) {
+  console.error(`Back 1,000,000 Block Error:\t${error}`);
+}
